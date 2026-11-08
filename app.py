@@ -11,6 +11,8 @@ st.divider()
 # --- Sidebar ---
 with st.sidebar:
     st.header("🔑 Configuration")
+    api_key = st.secrets.get("GEMINI_API_KEY", "")
+    if not api_key:
     api_key = st.text_input("Enter Gemini API Key", type="password", placeholder="Paste your API key here")
     st.info("Get your free API key from Google AI Studio")
     st.markdown("---")
