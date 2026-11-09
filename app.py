@@ -25,10 +25,10 @@ if not api_key:
 client = genai.Client(api_key=api_key)
 
 def ask_ai(prompt):
-  response = client.models.generate_content(
-    model="gemini-3.8-flash",
-    contents=prompt
-)
+    response = client.models.generate_content(
+        model="gemini-3.8-flash",
+        contents=prompt
+    )
     return response.text
 
 # --- File Upload ---
